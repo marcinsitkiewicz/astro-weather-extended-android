@@ -8,10 +8,10 @@ import android.widget.Toast
 import android.widget.Toast.LENGTH_SHORT
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager2.widget.ViewPager2
-import com.example.astroweather.fragments.HomeFragment
-import com.example.astroweather.fragments.MoonFragment
-import com.example.astroweather.fragments.SunFragment
-import com.example.astroweather.fragments.adapters.ViewPagerAdapter
+import com.example.astroweatherextended.fragments.HomeFragment
+import com.example.astroweatherextended.fragments.MoonFragment
+import com.example.astroweatherextended.fragments.SunFragment
+import com.example.astroweatherextended.fragments.adapters.ViewPagerAdapter
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 

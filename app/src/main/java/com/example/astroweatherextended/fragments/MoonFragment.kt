@@ -1,4 +1,4 @@
-package com.example.astroweather.fragments
+package com.example.astroweatherextended.fragments
 
 import android.content.Context
 import android.os.Bundle
@@ -9,8 +9,8 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import com.astrocalculator.AstroCalculator
 import com.astrocalculator.AstroDateTime
-import com.example.astroweather.R
-import com.example.astroweather.R.layout.fragment_moon
+import com.example.astroweatherextended.R
+import com.example.astroweatherextended.R.layout.fragment_moon
 import java.text.DecimalFormat
 import java.text.NumberFormat
 import java.time.LocalDateTime

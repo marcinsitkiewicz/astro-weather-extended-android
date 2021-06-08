@@ -1,4 +1,4 @@
-package com.example.astroweather.fragments
+package com.example.astroweatherextended.fragments
 
 import android.content.Context
 import android.os.Bundle
@@ -13,8 +13,8 @@ import android.widget.Toast
 import android.widget.Toast.LENGTH_LONG
 import android.widget.Toast.LENGTH_SHORT
 import androidx.fragment.app.Fragment
-import com.example.astroweather.MainActivity
-import com.example.astroweather.R
+import com.example.astroweatherextended.MainActivity
+import com.example.astroweatherextended.R
 
 class HomeFragment : Fragment() {
 
