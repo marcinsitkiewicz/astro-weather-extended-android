@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              tools:context=".fragments.HomeFragment"
+              android:orientation="vertical"
+              tools:ignore="HardcodedText, Autofill, LabelFor, TextFields"
+              android:gravity="center">
+
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Refresh Rate [s]"
+            android:layout_gravity="center"
+            android:layout_marginBottom="5dp"/>
+
+
+    <Spinner
+            android:id="@+id/sp_refresh_rate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:entries="@array/refresh_time"
+            android:textAlignment="center">
+    </Spinner>
+
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Latitude"
+            android:paddingBottom="0dp"
+            android:layout_marginTop="40dp"/>
+
+    <EditText
+            android:id="@+id/et_lat"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:inputType="numberSigned|numberDecimal">
+
+    </EditText>
+
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Longitude"
+            android:layout_marginBottom="0dp"
+            android:layout_marginTop="40dp"/>
+
+    <EditText
+            android:id="@+id/et_long"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:inputType="numberSigned|numberDecimal">
+
+    </EditText>
+
+
+    <Button
+            android:id="@+id/btn_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Save"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="50dp">
+    </Button>
+
+</LinearLayout>

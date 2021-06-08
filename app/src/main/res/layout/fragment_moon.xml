@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".fragments.MoonFragment"
+        android:orientation="vertical"
+        tools:ignore="HardcodedText, NestedWeights">
+
+    <ImageView
+            android:layout_width="200dp"
+            android:layout_height="0dp"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:contentDescription="Moon image"
+            android:layout_gravity="center"
+            android:layout_weight="2"
+            android:src="@drawable/moon_image"/>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp">
+
+        <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Latitude: "
+                android:textSize="15sp"
+                android:layout_weight="1"
+                android:gravity="end"/>
+
+        <TextView
+                android:id="@+id/tv_moon_lat"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="15sp"
+                android:layout_weight="1"
+                android:gravity="start"/>
+
+        <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Longitude: "
+                android:textSize="15sp"
+                android:layout_weight="1"
+                android:gravity="end"/>
+
+        <TextView
+                android:id="@+id/tv_moon_long"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="15sp"
+                android:layout_weight="1"
+                android:gravity="start"/>
+
+    </LinearLayout>
+
+    <TextClock
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:text=""
+            android:format12Hour="kk:mm:ss"
+            android:textSize="35sp"
+            android:layout_gravity="center"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:layout_weight="1"/>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:layout_weight="3"
+            android:paddingStart="50dp"
+            android:paddingEnd="50dp">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="horizontal"
+                android:layout_weight="1">
+
+            <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Moonrise"
+                    android:textSize="15sp"
+                    android:layout_weight="1"/>
+
+            <TextView
+                    android:id="@+id/tv_moonrise"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="15sp"
+                    android:layout_weight="1"
+                    android:gravity="end"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="horizontal"
+                android:layout_weight="1">
+
+            <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Moonset"
+                    android:textSize="15sp"
+                    android:layout_weight="1"/>
+
+            <TextView
+                    android:id="@+id/tv_moonset"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="15sp"
+                    android:layout_weight="1"
+                    android:gravity="end"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="horizontal"
+                android:layout_weight="1">
+
+            <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Next New Moon"
+                    android:textSize="15sp"
+                    android:layout_weight="1"/>
+
+            <TextView
+                    android:id="@+id/tv_new_moon"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="15sp"
+                    android:layout_weight="1"
+                    android:gravity="end"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="horizontal"
+                android:layout_weight="1">
+
+            <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Next Full Moon"
+                    android:textSize="15sp"
+                    android:layout_weight="1"/>
+
+            <TextView
+                    android:id="@+id/tv_full_moon"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="15sp"
+                    android:layout_weight="1"
+                    android:gravity="end"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="horizontal"
+                android:layout_weight="1">
+
+            <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Moon Phase"
+                    android:textSize="15sp"
+                    android:layout_weight="1"/>
+
+            <TextView
+                    android:id="@+id/tv_moon_phase"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="15sp"
+                    android:layout_weight="1"
+                    android:gravity="end"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="horizontal"
+                android:layout_weight="1">
+
+            <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Synodic Day"
+                    android:textSize="15sp"
+                    android:layout_weight="1"/>
+
+            <TextView
+                    android:id="@+id/tv_synodic_day"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="15sp"
+                    android:layout_weight="1"
+                    android:gravity="end"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
