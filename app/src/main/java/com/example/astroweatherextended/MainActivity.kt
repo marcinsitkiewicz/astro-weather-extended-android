@@ -1,38 +1,100 @@
 package com.example.astroweatherextended
 
+import android.content.Context
 import android.os.Bundle
-import com.google.android.material.floatingactionbutton.FloatingActionButton
-import com.google.android.material.snackbar.Snackbar
+import android.os.Handler
+import android.os.Looper
+import android.widget.Toast
+import android.widget.Toast.LENGTH_SHORT
 import androidx.appcompat.app.AppCompatActivity
-import android.view.Menu
-import android.view.MenuItem
+import androidx.viewpager2.widget.ViewPager2
+import com.example.astroweather.fragments.HomeFragment
+import com.example.astroweather.fragments.MoonFragment
+import com.example.astroweather.fragments.SunFragment
+import com.example.astroweather.fragments.adapters.ViewPagerAdapter
+import com.google.android.material.tabs.TabLayout
+import com.google.android.material.tabs.TabLayoutMediator
 
 class MainActivity : AppCompatActivity() {
+
+    private var isDeviceTablet: Boolean ?= null
+    private lateinit var viewPager: ViewPager2
+    private lateinit var tabLayout: TabLayout
+    private lateinit var adapter: ViewPagerAdapter
+    private val handler: Handler = Handler(Looper.getMainLooper())
+    private var sunFragment: SunFragment ?= null
+    private var moonFragment: MoonFragment ?= null
+    private var refreshRate = 5
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        setSupportActionBar(findViewById(R.id.toolbar))
 
-        findViewById<FloatingActionButton>(R.id.fab).setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                .setAction("Action", null).show()
+        isDeviceTablet = resources.getBoolean(R.bool.isTablet)
+        if (isDeviceTablet == true) {
+            sunFragment = supportFragmentManager.findFragmentById(R.id.fr_sun) as SunFragment
+            moonFragment = supportFragmentManager.findFragmentById(R.id.fr_moon) as MoonFragment
+        }
+        else {
+            populateAdapter()
+            initTabLayout()
+        }
+
+        handler.postDelayed(refreshTask, 1000)
+    }
+
+    private val refreshTask = object: Runnable {
+        override fun run() {
+//            Toast.makeText(this@MainActivity, "Update", LENGTH_SHORT).show()
+            sunFragment?.refreshFragment()
+            moonFragment?.refreshFragment()
+            handler.postDelayed(this, (refreshRate * 1000).toLong())
         }
     }
 
-    override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        menuInflater.inflate(R.menu.menu_main, menu)
-        return true
+    override fun onPause() {
+        handler.removeCallbacks(refreshTask)
+        super.onPause()
     }
 
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        return when (item.itemId) {
-            R.id.action_settings -> true
-            else -> super.onOptionsItemSelected(item)
+    override fun onResume() {
+        handler.postDelayed(refreshTask, 1000)
+        super.onResume()
+    }
+
+    private fun initTabLayout() {
+        tabLayout = findViewById(R.id.tabs)
+        TabLayoutMediator(
+            tabLayout, viewPager
+        ) { tab, position ->
+            tab.text = adapter.mFragmentTitleList[position]
+        }.attach()
+    }
+
+    private fun populateAdapter() {
+        viewPager = findViewById(R.id.viewPager)
+        adapter = ViewPagerAdapter(this)
+
+        adapter.addFragment(HomeFragment(), "HOME")
+        adapter.addFragment(SunFragment(), "SUN")
+        adapter.addFragment(MoonFragment(), "MOON")
+
+        viewPager.adapter = adapter
+
+        sunFragment = adapter.getFragment("SUN") as SunFragment
+        moonFragment = adapter.getFragment("MOON") as MoonFragment
+    }
+
+    fun updatePreferences() {
+        val preferences = getSharedPreferences("preferences", Context.MODE_PRIVATE)
+        refreshRate = preferences.getInt("refresh_value_key", 5)
+
+        if (isDeviceTablet == true) {
+            sunFragment?.loadPreferences()
+            sunFragment?.refreshFragment()
+
+            moonFragment?.loadPreferences()
+            moonFragment?.refreshFragment()
         }
     }
 }
