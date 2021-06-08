@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="HardcodedText,NestedWeights,RtlSymmetry">
+
+    <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            tools:src="@drawable/sun_image"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="8dp"
+            android:contentDescription="Image representing weather on current day"/>
+
+    <TextView
+            android:id="@+id/tv_item_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="@tools:sample/date/ddmmyy"
+            android:textSize="18sp"
+            android:textColor="@android:color/black"
+            app:layout_constraintTop_toTopOf="@+id/imageView2"
+            app:layout_constraintStart_toEndOf="@+id/imageView2"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="15dp"
+            app:layout_constraintBottom_toTopOf="@+id/textView2"/>
+
+    <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            tools:text="light rain"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+            app:layout_constraintStart_toEndOf="@+id/imageView2"
+            android:layout_marginStart="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginBottom="20dp"
+            app:layout_constraintHorizontal_bias="0.050"/>
+
+    <TextView
+            android:id="@+id/tv_item_temp_max"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="27"
+            app:layout_constraintTop_toTopOf="@+id/imageView2"
+            app:layout_constraintEnd_toStartOf="@id/tv_test"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:textSize="20sp"/>
+
+    <TextView
+            android:id="@+id/tv_test"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="°"
+            app:layout_constraintEnd_toStartOf="@id/tv_test2"
+            app:layout_constraintTop_toTopOf="@id/tv_item_temp_max"
+            android:textSize="20sp"/>
+
+    <TextView
+            android:id="@+id/tv_test2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="@string/temp_unit"
+            app:layout_constraintEnd_toStartOf="@id/tv_test3"
+            app:layout_constraintTop_toTopOf="@id/tv_item_temp_max"
+            android:textSize="20sp"/>
+
+    <TextView
+            android:id="@+id/tv_test3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text=" / "
+            app:layout_constraintEnd_toStartOf="@id/tv_item_temp_min"
+            app:layout_constraintTop_toTopOf="@id/tv_item_temp_max"
+            android:textSize="20sp"/>
+
+    <TextView
+            android:id="@+id/tv_item_temp_min"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="15"
+            app:layout_constraintEnd_toStartOf="@id/tv_test5"
+            app:layout_constraintTop_toTopOf="@id/tv_item_temp_max"
+            android:textSize="20sp"/>
+
+    <TextView
+            android:id="@+id/tv_test5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="°"
+            app:layout_constraintEnd_toStartOf="@id/tv_test6"
+            app:layout_constraintTop_toTopOf="@id/tv_item_temp_max"
+            android:textSize="20sp"/>
+
+    <TextView
+            android:id="@+id/tv_test6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="@string/temp_unit"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_item_temp_max"
+            android:layout_marginEnd="10dp"
+            android:textSize="20sp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
