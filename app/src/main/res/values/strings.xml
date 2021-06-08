@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">AstroWeather</string>
+    <string name="app_name">AstroWeatherExtended</string>
     <string-array name="refresh_time">
         <item>1</item>
         <item>5</item>
@@ -7,4 +7,6 @@
         <item>30</item>
         <item>60</item>
     </string-array>
+
+    <string name="temp_unit">C</string>
 </resources>

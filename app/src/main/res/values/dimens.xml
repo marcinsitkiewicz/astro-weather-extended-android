@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <bool name="isTablet">false</bool>
+
+    <dimen name="text_temp_size">25sp</dimen>
 </resources>

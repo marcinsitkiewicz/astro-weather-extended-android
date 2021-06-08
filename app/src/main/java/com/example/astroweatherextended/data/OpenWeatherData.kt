@@ -85,5 +85,3 @@ data class FeelsLike(
     val eve: Double,
     val morn: Double
 )
-
-
