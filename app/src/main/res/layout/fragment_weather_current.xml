@@ -7,7 +7,7 @@
               tools:ignore="HardcodedText,NestedWeights">
 
     <TextView
-            android:id="@+id/tv_curr_city"
+            android:id="@+id/tv_current_city"
             android:layout_width="wrap_content"
             android:layout_height="0dp"
             android:layout_weight="1"
@@ -18,7 +18,7 @@
     </TextView>
 
     <TextView
-            android:id="@+id/tv_curr_country"
+            android:id="@+id/tv_current_country"
             android:layout_width="wrap_content"
             android:layout_height="0dp"
             android:layout_weight="1"
@@ -44,7 +44,7 @@
                 android:layout_gravity="center"/>
 
         <TextView
-                android:id="@+id/tv_curr_lat"
+                android:id="@+id/tv_current_lat"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text=""
@@ -63,7 +63,7 @@
                 android:layout_gravity="center"/>
 
         <TextView
-                android:id="@+id/tv_curr_long"
+                android:id="@+id/tv_current_long"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text=""
@@ -85,7 +85,7 @@
             android:src="@drawable/sun_image"/>
 
     <TextView
-            android:id="@+id/tv_curr_desc"
+            android:id="@+id/tv_current_desc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="light rain"
@@ -111,7 +111,7 @@
             android:layout_marginBottom="50dp">
 
         <TextView
-                android:id="@+id/tv_curr_temp"
+                android:id="@+id/tv_current_temp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="25"
@@ -140,7 +140,7 @@
         </TextView>
 
         <TextView
-                android:id="@+id/tv_curr_feel_temp"
+                android:id="@+id/tv_current_feel_temp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="25"
@@ -186,7 +186,7 @@
             android:layout_marginBottom="50dp">
 
         <TextView
-                android:id="@+id/tv_curr_press"
+                android:id="@+id/tv_current_press"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="1000"

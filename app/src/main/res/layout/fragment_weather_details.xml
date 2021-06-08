@@ -12,7 +12,7 @@
                   android:orientation="vertical">
 
         <TextView
-                android:id="@+id/tv_curr_city"
+                android:id="@+id/tv_current_city"
                 android:layout_width="wrap_content"
                 android:layout_height="0dp"
                 android:text="City"
@@ -23,7 +23,7 @@
         </TextView>
 
         <TextView
-                android:id="@+id/tv_curr_country"
+                android:id="@+id/tv_current_country"
                 android:layout_width="wrap_content"
                 android:layout_height="0dp"
                 android:text="Country"
@@ -49,7 +49,7 @@
                     android:layout_gravity="center"/>
 
             <TextView
-                    android:id="@+id/tv_det_lat"
+                    android:id="@+id/tv_details_lat"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:text=""
@@ -68,7 +68,7 @@
                     android:layout_gravity="center"/>
 
             <TextView
-                    android:id="@+id/tv_det_long"
+                    android:id="@+id/tv_details_long"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:text=""
@@ -115,7 +115,7 @@
                     android:layout_weight="1">
 
                 <TextView
-                        android:id="@+id/tv_det_wind_dir"
+                        android:id="@+id/tv_details_wind_dir"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:text="270"
@@ -159,7 +159,7 @@
                     android:layout_weight="1">
 
                 <TextView
-                        android:id="@+id/tv_det_wind_speed"
+                        android:id="@+id/tv_details_wind_speed"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:text="15"
@@ -204,7 +204,7 @@
                     android:layout_weight="1">
 
                 <TextView
-                        android:id="@+id/tv_det_wind_gust"
+                        android:id="@+id/tv_details_wind_gust"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:text="15"
@@ -249,7 +249,7 @@
                     android:layout_weight="1">
 
                 <TextView
-                        android:id="@+id/tv_det_hum"
+                        android:id="@+id/tv_details_hum"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:text="80"
@@ -294,7 +294,7 @@
                     android:layout_weight="1">
 
                 <TextView
-                        android:id="@+id/tv_det_vis"
+                        android:id="@+id/tv_details_vis"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:text="6000"
@@ -339,7 +339,7 @@
                     android:layout_weight="1">
 
                 <TextView
-                        android:id="@+id/tv_det_cloud"
+                        android:id="@+id/tv_details_cloud"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:text="10"
