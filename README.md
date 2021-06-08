@@ -1,2 +1,2 @@
 # AstroWeatherExtended
- extended verrion of the AstroWeather app
+ the extended version of the AstroWeather app
