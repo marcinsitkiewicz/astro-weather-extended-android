@@ -9,7 +9,7 @@ interface Api {
     @GET("data/2.5/onecall")
     fun getWeather(
         @Query("lat") lat: String,
-        @Query("long") long: String,
+        @Query("lon") long: String,
         @Query("exclude") exclude: String,
         @Query("appid") appid: String
     ): Call<OpenWeatherData>
