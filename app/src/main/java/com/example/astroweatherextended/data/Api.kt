@@ -11,6 +11,7 @@ interface Api {
         @Query("lat") lat: String,
         @Query("lon") long: String,
         @Query("exclude") exclude: String,
-        @Query("appid") appid: String
+        @Query("appid") appid: String,
+        @Query("units") units: String
     ): Call<OpenWeatherData>
 }
