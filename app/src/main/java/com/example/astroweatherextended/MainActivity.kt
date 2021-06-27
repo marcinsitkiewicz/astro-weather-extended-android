@@ -4,51 +4,51 @@ import android.content.Context
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import android.util.Log
 import android.widget.Toast
-import android.widget.Toast.LENGTH_SHORT
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager2.widget.ViewPager2
-import com.example.astroweatherextended.fragments.HomeFragment
-import com.example.astroweatherextended.fragments.MoonFragment
-import com.example.astroweatherextended.fragments.SunFragment
+import com.example.astroweatherextended.data.RetrofitClient
+import com.example.astroweatherextended.data.models.OpenWeatherData
+import com.example.astroweatherextended.fragments.*
 import com.example.astroweatherextended.fragments.adapters.ViewPagerAdapter
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
+import com.google.gson.Gson
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
+import org.jetbrains.anko.doAsync
+import org.jetbrains.anko.activityUiThread
 
 class MainActivity : AppCompatActivity() {
-
-    private var isDeviceTablet: Boolean ?= null
     private lateinit var viewPager: ViewPager2
     private lateinit var tabLayout: TabLayout
     private lateinit var adapter: ViewPagerAdapter
     private val handler: Handler = Handler(Looper.getMainLooper())
     private var sunFragment: SunFragment ?= null
     private var moonFragment: MoonFragment ?= null
-    private var refreshRate = 5
+    private var refreshRate = 1
+    private lateinit var latitude: String
+    private lateinit var longitude: String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        isDeviceTablet = resources.getBoolean(R.bool.isTablet)
-        if (isDeviceTablet == true) {
-            sunFragment = supportFragmentManager.findFragmentById(R.id.fr_sun) as SunFragment
-            moonFragment = supportFragmentManager.findFragmentById(R.id.fr_moon) as MoonFragment
-        }
-        else {
-            populateAdapter()
-            initTabLayout()
-        }
+        populateAdapter()
+        initTabLayout()
+        updatePreferences()
 
         handler.postDelayed(refreshTask, 1000)
     }
 
     private val refreshTask = object: Runnable {
         override fun run() {
-//            Toast.makeText(this@MainActivity, "Update", LENGTH_SHORT).show()
+            getWeatherData()
             sunFragment?.refreshFragment()
             moonFragment?.refreshFragment()
-            handler.postDelayed(this, (refreshRate * 1000).toLong())
+            handler.postDelayed(this, (refreshRate * 60000).toLong())
         }
     }
 
@@ -67,17 +67,49 @@ class MainActivity : AppCompatActivity() {
         TabLayoutMediator(
             tabLayout, viewPager
         ) { tab, position ->
-            tab.text = adapter.mFragmentTitleList[position]
+            if (resources.getBoolean(R.bool.isTablet))
+                tab.text = adapter.mFragmentTitleList[position]
+            else
+                tab.setIcon(adapter.mFragmentIconList[position])
         }.attach()
+    }
+
+    fun getWeatherData() {
+        val preferences = getSharedPreferences("preferences", Context.MODE_PRIVATE)
+
+        RetrofitClient.apiService.getWeather(latitude, longitude, "minutely,hourly,alerts", "3796a47cdeac9263db6871ec76f6f8db", "metric").enqueue(object :
+            Callback<OpenWeatherData> {
+            override fun onResponse(call: Call<OpenWeatherData>, response: Response<OpenWeatherData>) {
+                val weatherResponse = response.body()
+                val gson = Gson()
+                val weatherResponseString = gson.toJson(weatherResponse)
+
+                preferences ?: return
+                with (preferences.edit()) {
+                    val cityNameKey = preferences.getString("city_key", "")
+                    putString(cityNameKey, weatherResponseString)
+                    apply()
+                }
+                Toast.makeText(this@MainActivity, "Weather updated", Toast.LENGTH_SHORT).show()
+
+            }
+
+            override fun onFailure(call: Call<OpenWeatherData>, t: Throwable?) {
+                Toast.makeText(this@MainActivity, "No internet connection", Toast.LENGTH_SHORT).show()
+            }
+        })
     }
 
     private fun populateAdapter() {
         viewPager = findViewById(R.id.viewPager)
         adapter = ViewPagerAdapter(this)
 
-        adapter.addFragment(HomeFragment(), "HOME")
-        adapter.addFragment(SunFragment(), "SUN")
-        adapter.addFragment(MoonFragment(), "MOON")
+        adapter.addFragment(HomeFragment(), "HOME", R.drawable.ic_settings)
+        adapter.addFragment(SunFragment(), "SUN", R.drawable.ic_sun)
+        adapter.addFragment(MoonFragment(), "MOON", R.drawable.ic_moon)
+        adapter.addFragment(CurrentFragment(), "CURRENT", R.drawable.ic_cloudy)
+        adapter.addFragment(DetailsFragment(), "DETAILS", R.drawable.ic_wind)
+        adapter.addFragment(ForecastFragment(), "FORECAST", R.drawable.ic_7day)
 
         viewPager.adapter = adapter
 
@@ -88,13 +120,7 @@ class MainActivity : AppCompatActivity() {
     fun updatePreferences() {
         val preferences = getSharedPreferences("preferences", Context.MODE_PRIVATE)
         refreshRate = preferences.getInt("refresh_value_key", 5)
-
-        if (isDeviceTablet == true) {
-            sunFragment?.loadPreferences()
-            sunFragment?.refreshFragment()
-
-            moonFragment?.loadPreferences()
-            moonFragment?.refreshFragment()
-        }
+        latitude = preferences.getString("latitude_key", "52").toString()
+        longitude = preferences.getString("longitude_key", "19").toString()
     }
 }
