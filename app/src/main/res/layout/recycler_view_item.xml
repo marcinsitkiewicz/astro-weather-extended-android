@@ -8,7 +8,7 @@
         tools:ignore="HardcodedText,NestedWeights,RtlSymmetry">
 
     <ImageView
-            android:id="@+id/imageView2"
+            android:id="@+id/iv_item_icon"
             android:layout_width="100dp"
             android:layout_height="100dp"
             tools:src="@drawable/sun_image"
@@ -25,23 +25,22 @@
             tools:text="@tools:sample/date/ddmmyy"
             android:textSize="18sp"
             android:textColor="@android:color/black"
-            app:layout_constraintTop_toTopOf="@+id/imageView2"
-            app:layout_constraintStart_toEndOf="@+id/imageView2"
+            app:layout_constraintTop_toTopOf="@+id/iv_item_icon"
+            app:layout_constraintStart_toEndOf="@+id/iv_item_icon"
             android:layout_marginStart="8dp"
             android:layout_marginBottom="15dp"
             android:layout_marginTop="15dp"
-            app:layout_constraintBottom_toTopOf="@+id/textView2"/>
+            app:layout_constraintBottom_toTopOf="@+id/tv_item_description"/>
 
     <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/tv_item_description"
             android:layout_width="wrap_content"
             android:layout_height="20dp"
             tools:text="light rain"
             android:textSize="15sp"
-            app:layout_constraintBottom_toBottomOf="@+id/imageView2"
-            app:layout_constraintStart_toEndOf="@+id/imageView2"
-            android:layout_marginStart="5dp"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_item_icon"
+            app:layout_constraintStart_toEndOf="@+id/iv_item_icon"
+            android:layout_marginStart="8dp"
             android:layout_marginBottom="20dp"
             app:layout_constraintHorizontal_bias="0.050"/>
 
@@ -50,7 +49,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             tools:text="27"
-            app:layout_constraintTop_toTopOf="@+id/imageView2"
+            app:layout_constraintTop_toTopOf="@+id/iv_item_icon"
             app:layout_constraintEnd_toStartOf="@id/tv_test"
             app:layout_constraintBottom_toBottomOf="parent"
             android:textSize="20sp"/>
