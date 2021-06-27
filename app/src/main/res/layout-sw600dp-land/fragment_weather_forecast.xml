@@ -14,12 +14,11 @@
         <TextView
                 android:id="@+id/tv_forecast_city"
                 android:layout_width="wrap_content"
-                android:layout_height="0dp"
+                android:layout_height="wrap_content"
                 android:text="City"
                 android:gravity="center"
                 android:layout_gravity="center"
-                android:textSize="25sp"
-                android:layout_weight="1">
+                android:textSize="55sp">
         </TextView>
 
         <LinearLayout
@@ -32,7 +31,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:text="Latitude: "
-                    android:textSize="15sp"
+                    android:textSize="35sp"
                     android:layout_weight="1"
                     android:gravity="end"
                     android:layout_gravity="center"/>
@@ -42,7 +41,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:text=""
-                    android:textSize="15sp"
+                    android:textSize="35sp"
                     android:layout_weight="1"
                     android:gravity="start"
                     android:layout_gravity="center"/>
@@ -51,7 +50,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:text="Longitude: "
-                    android:textSize="15sp"
+                    android:textSize="35sp"
                     android:layout_weight="1"
                     android:gravity="end"
                     android:layout_gravity="center"/>
@@ -61,7 +60,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:text=""
-                    android:textSize="15sp"
+                    android:textSize="35sp"
                     android:layout_weight="1"
                     android:gravity="start"
                     android:layout_gravity="center"/>
@@ -79,8 +78,8 @@
                 android:id="@+id/rv_forecast_recyclerView"
                 android:layout_height="match_parent"
                 android:layout_width="match_parent"
-                android:layout_marginStart="10dp"
-                android:layout_marginEnd="10dp"
+                android:layout_marginStart="300dp"
+                android:layout_marginEnd="300dp"
                 tools:listitem="@layout/recycler_view_item"
         />
 

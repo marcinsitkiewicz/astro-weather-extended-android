@@ -4,69 +4,266 @@
               android:layout_width="match_parent"
               android:layout_height="match_parent"
               tools:context=".fragments.HomeFragment"
-              android:orientation="vertical"
+              android:orientation="horizontal"
               tools:ignore="HardcodedText, Autofill, LabelFor, TextFields"
               android:gravity="center">
 
+    <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
 
-    <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Refresh Rate [s]"
-            android:layout_gravity="center"
-            android:layout_marginBottom="5dp"/>
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingStart="50dp"
+                android:paddingEnd="50dp"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp">
 
+            <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="25sp"
+                    android:text="Data Refresh Rate [s]"/>
 
-    <Spinner
-            android:id="@+id/sp_refresh_rate"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:entries="@array/refresh_time"
-            android:textAlignment="center">
-    </Spinner>
+            <Spinner
+                    android:id="@+id/sp_refresh_rate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="25sp"
+                    android:entries="@array/refresh_time"
+                    android:gravity="end">
+            </Spinner>
 
+        </LinearLayout>
 
-    <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Latitude"
-            android:paddingBottom="0dp"
-            android:layout_marginTop="40dp"/>
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingStart="50dp"
+                android:paddingEnd="50dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp">
 
-    <EditText
-            android:id="@+id/et_lat"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:textAlignment="center"
-            android:inputType="numberSigned|numberDecimal">
+            <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="25sp"
+                    android:text="Latitude"/>
 
-    </EditText>
+            <EditText
+                    android:id="@+id/et_lat"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="25sp"
+                    android:gravity="end"
+                    android:inputType="numberSigned|numberDecimal">
 
+            </EditText>
 
-    <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Longitude"
-            android:layout_marginBottom="0dp"
-            android:layout_marginTop="40dp"/>
+        </LinearLayout>
 
-    <EditText
-            android:id="@+id/et_long"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:textAlignment="center"
-            android:inputType="numberSigned|numberDecimal">
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingStart="50dp"
+                android:paddingEnd="50dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp">
 
-    </EditText>
+            <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="25sp"
+                    android:text="Longitude"/>
 
+            <EditText
+                    android:id="@+id/et_long"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="25sp"
+                    android:gravity="end"
+                    android:inputType="numberSigned|numberDecimal">
 
-    <Button
-            android:id="@+id/btn_save"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Save"
-            android:layout_marginBottom="5dp"
-            android:layout_marginTop="50dp">
-    </Button>
+            </EditText>
+
+        </LinearLayout>
+
+        <Button
+                android:id="@+id/btn_save"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Set coords"
+                android:textSize="25sp"
+                android:layout_gravity="center">
+        </Button>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingStart="50dp"
+                android:paddingEnd="50dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp">
+
+            <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="25sp"
+                    android:text="City"/>
+
+            <EditText
+                    android:id="@+id/et_city_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="25sp"
+                    android:gravity="end">
+
+            </EditText>
+
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+            <Button
+                    android:id="@+id/btn_set_city"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Set city"
+                    android:textSize="25sp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_gravity="center">
+            </Button>
+
+            <Button
+                    android:id="@+id/btn_save_city"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Save"
+                    android:textSize="25sp"
+                    android:layout_marginStart="20dp"
+                    android:layout_gravity="center">
+            </Button>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingStart="50dp"
+                android:paddingEnd="50dp"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp">
+
+            <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="25sp"
+                    android:text="Favorite cities"/>
+
+            <Spinner
+                    android:id="@+id/sp_favorites"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="25sp"
+                    android:entries="@array/favorite_cities"
+                    android:gravity="end">
+            </Spinner>
+
+        </LinearLayout>
+
+        <Button
+                android:id="@+id/btn_remove_city"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Remove city"
+                android:textSize="25sp"
+                android:layout_gravity="center">
+        </Button>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingStart="50dp"
+                android:paddingEnd="50dp"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp">
+
+            <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="25sp"
+                    android:text="Temperature unit"/>
+
+            <ToggleButton
+                    android:id="@+id/tb_temp_unit"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="25sp"
+                    android:textOff="@string/celc"
+                    android:textOn="@string/fahr">
+            </ToggleButton>
+
+        </LinearLayout>
+
+        <Button
+                android:id="@+id/btn_update"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Update weather data"
+                android:layout_marginTop="50dp"
+                android:textSize="25sp"
+                android:layout_gravity="center">
+        </Button>
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+            <TextView
+                    android:id="@+id/tv_conn_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:textSize="20sp"
+                    android:layout_alignParentBottom="true"
+                    android:text="">
+            </TextView>
+        </RelativeLayout>
+
+    </LinearLayout>
+
 
 </LinearLayout>

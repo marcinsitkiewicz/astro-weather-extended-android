@@ -18,7 +18,7 @@
                 android:text="City"
                 android:gravity="center"
                 android:layout_gravity="center"
-                android:textSize="25sp"
+                android:textSize="45sp"
                 android:layout_weight="1">
         </TextView>
 
@@ -32,7 +32,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:text="Latitude: "
-                    android:textSize="15sp"
+                    android:textSize="35sp"
                     android:layout_weight="1"
                     android:gravity="end"
                     android:layout_gravity="center"/>
@@ -42,7 +42,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:text=""
-                    android:textSize="15sp"
+                    android:textSize="35sp"
                     android:layout_weight="1"
                     android:gravity="start"
                     android:layout_gravity="center"/>
@@ -51,7 +51,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:text="Longitude: "
-                    android:textSize="15sp"
+                    android:textSize="35sp"
                     android:layout_weight="1"
                     android:gravity="end"
                     android:layout_gravity="center"/>
@@ -61,7 +61,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:text=""
-                    android:textSize="15sp"
+                    android:textSize="35sp"
                     android:layout_weight="1"
                     android:gravity="start"
                     android:layout_gravity="center"/>
@@ -79,7 +79,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Wind"
-                android:textSize="@dimen/text_temp_size"
+                android:textSize="35sp"
+                android:layout_marginTop="50dp"
                 android:layout_gravity="center"/>
 
         <LinearLayout
@@ -91,7 +92,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:text="Direction: "
-                    android:textSize="@dimen/text_temp_size"
+                    android:textSize="35sp"
                     android:layout_weight="1"
                     android:gravity="end"
                     android:layout_gravity="center"
@@ -108,7 +109,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:text="270"
-                        android:textSize="@dimen/text_temp_size"
+                        android:textSize="35sp"
                         android:layout_weight="1"
                         android:gravity="end"
                         android:layout_gravity="center"/>
@@ -117,7 +118,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:text=" °"
-                        android:textSize="@dimen/text_temp_size"
+                        android:textSize="35sp"
                         android:layout_weight="1"
                         android:gravity="start"
                         android:layout_gravity="center"/>
@@ -135,7 +136,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:text="Speed: "
-                    android:textSize="@dimen/text_temp_size"
+                    android:textSize="35sp"
                     android:layout_weight="1"
                     android:gravity="end"
                     android:layout_gravity="center"
@@ -152,7 +153,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:text="15"
-                        android:textSize="@dimen/text_temp_size"
+                        android:textSize="35sp"
                         android:layout_weight="1"
                         android:gravity="end"
                         android:layout_gravity="center"/>
@@ -161,7 +162,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:text=" m/s"
-                        android:textSize="@dimen/text_temp_size"
+                        android:textSize="35sp"
                         android:layout_weight="1"
                         android:gravity="start"
                         android:layout_gravity="center"/>
@@ -180,7 +181,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:text="Gusts: "
-                    android:textSize="@dimen/text_temp_size"
+                    android:textSize="35sp"
                     android:layout_weight="1"
                     android:gravity="end"
                     android:layout_gravity="center"
@@ -197,7 +198,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:text="15"
-                        android:textSize="@dimen/text_temp_size"
+                        android:textSize="35sp"
                         android:layout_weight="1"
                         android:gravity="end"
                         android:layout_gravity="center"/>
@@ -206,7 +207,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:text=" m/s"
-                        android:textSize="@dimen/text_temp_size"
+                        android:textSize="35sp"
                         android:layout_weight="1"
                         android:gravity="start"
                         android:layout_gravity="center"/>
@@ -225,7 +226,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="Humidity:"
-                    android:textSize="@dimen/text_temp_size"
+                    android:textSize="35sp"
                     android:layout_gravity="center"
                     android:gravity="end"
                     android:paddingBottom="50dp"
@@ -242,7 +243,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:text="80"
-                        android:textSize="@dimen/text_temp_size"
+                        android:textSize="35sp"
                         android:layout_weight="1"
                         android:gravity="end"
                         android:layout_gravity="center"/>
@@ -251,7 +252,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:text=" %"
-                        android:textSize="@dimen/text_temp_size"
+                        android:textSize="35sp"
                         android:layout_weight="1"
                         android:gravity="start"
                         android:layout_gravity="center"/>
@@ -270,7 +271,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="Visibility:"
-                    android:textSize="@dimen/text_temp_size"
+                    android:textSize="35sp"
                     android:layout_gravity="center"
                     android:gravity="end"
                     android:paddingBottom="50dp"
@@ -287,7 +288,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:text="6000"
-                        android:textSize="@dimen/text_temp_size"
+                        android:textSize="35sp"
                         android:layout_weight="1"
                         android:gravity="end"
                         android:layout_gravity="center"/>
@@ -296,7 +297,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:text=" m"
-                        android:textSize="@dimen/text_temp_size"
+                        android:textSize="35sp"
                         android:layout_weight="1"
                         android:gravity="start"
                         android:layout_gravity="center"/>
@@ -315,7 +316,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="Cloudiness:"
-                    android:textSize="@dimen/text_temp_size"
+                    android:textSize="35sp"
                     android:layout_gravity="center"
                     android:gravity="end"
                     android:paddingBottom="50dp"
@@ -332,7 +333,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:text="10"
-                        android:textSize="@dimen/text_temp_size"
+                        android:textSize="35sp"
                         android:layout_weight="1"
                         android:gravity="end"
                         android:layout_gravity="center"/>
@@ -341,7 +342,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:text=" %"
-                        android:textSize="@dimen/text_temp_size"
+                        android:textSize="35sp"
                         android:layout_weight="1"
                         android:gravity="start"
                         android:layout_gravity="center"/>

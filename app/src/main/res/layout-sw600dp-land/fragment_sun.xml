@@ -5,78 +5,95 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".fragments.SunFragment"
-        android:orientation="vertical"
+        android:orientation="horizontal"
         tools:ignore="HardcodedText, NestedWeights">
 
-    <ImageView
-            android:layout_width="200dp"
-            android:layout_height="0dp"
-            android:paddingTop="20dp"
-            android:paddingBottom="20dp"
-            android:contentDescription="Moon image"
-            android:layout_gravity="center"
-            android:layout_weight="2"
-            android:src="@drawable/sun_image"/>
-
     <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:paddingBottom="10dp"
-            android:paddingTop="10dp">
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
 
-        <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text="Latitude: "
-                android:textSize="15sp"
-                android:layout_weight="1"
-                android:gravity="end"/>
+        <ImageView
+                android:layout_width="400dp"
+                android:layout_height="0dp"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:contentDescription="Moon image"
+                android:layout_gravity="center"
+                android:layout_weight="4"
+                android:src="@drawable/sun_image"/>
 
-        <TextView
-                android:id="@+id/tv_sun_lat"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text=""
-                android:textSize="15sp"
-                android:layout_weight="1"
-                android:gravity="start"/>
+                    <TextClock
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:text=""
+                            android:format12Hour="kk:mm:ss"
+                            android:textSize="55sp"
+                            android:layout_gravity="center"
+                            android:paddingTop="10dp"
+                            android:paddingBottom="10dp"
+                            android:layout_weight="2"/>
 
-        <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text="Longitude: "
-                android:textSize="15sp"
-                android:layout_weight="1"
-                android:gravity="end"/>
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="horizontal"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:layout_weight="1">
 
-        <TextView
-                android:id="@+id/tv_sun_long"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text=""
-                android:textSize="15sp"
-                android:layout_weight="1"
-                android:gravity="start"/>
+            <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Latitude: "
+                    android:textSize="35sp"
+                    android:layout_weight="1"
+                    android:gravity="end"/>
+
+            <TextView
+                    android:id="@+id/tv_sun_lat"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="35sp"
+                    android:layout_weight="1"
+                    android:gravity="start"/>
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="horizontal"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:layout_weight="1">
+
+            <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Longitude: "
+                    android:textSize="35sp"
+                    android:layout_weight="1"
+                    android:gravity="end"/>
+
+            <TextView
+                    android:id="@+id/tv_sun_long"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="35sp"
+                    android:layout_weight="1"
+                    android:gravity="start"/>
+        </LinearLayout>
 
     </LinearLayout>
 
-    <TextClock
-            android:layout_width="wrap_content"
-            android:layout_height="0dp"
-            android:text=""
-            android:format12Hour="kk:mm:ss"
-            android:textSize="35sp"
-            android:layout_gravity="center"
-            android:paddingTop="10dp"
-            android:paddingBottom="10dp"
-            android:layout_weight="1"/>
-
     <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
             android:orientation="vertical"
-            android:layout_weight="3"
+            android:layout_weight="1"
             android:paddingStart="50dp"
             android:paddingEnd="50dp">
 
@@ -90,7 +107,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:text="Sunrise (time)"
-                    android:textSize="15sp"
+                    android:textSize="35sp"
                     android:layout_weight="1"/>
 
             <TextView
@@ -98,7 +115,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:text="13:45:10"
-                    android:textSize="15sp"
+                    android:textSize="35sp"
                     android:layout_weight="1"
                     android:gravity="end"/>
 
@@ -114,7 +131,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:text="Sunrise (azimuth)"
-                    android:textSize="15sp"
+                    android:textSize="35sp"
                     android:layout_weight="1"/>
 
             <TextView
@@ -122,7 +139,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:text="13:45:10"
-                    android:textSize="15sp"
+                    android:textSize="35sp"
                     android:layout_weight="1"
                     android:gravity="end"/>
 
@@ -138,7 +155,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:text="Sunset (time)"
-                    android:textSize="15sp"
+                    android:textSize="35sp"
                     android:layout_weight="1"/>
 
             <TextView
@@ -146,7 +163,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:text="13:45:10"
-                    android:textSize="15sp"
+                    android:textSize="35sp"
                     android:layout_weight="1"
                     android:gravity="end"/>
 
@@ -162,7 +179,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:text="Sunset (azimuth)"
-                    android:textSize="15sp"
+                    android:textSize="35sp"
                     android:layout_weight="1"/>
 
             <TextView
@@ -170,7 +187,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:text="13:45:10"
-                    android:textSize="15sp"
+                    android:textSize="35sp"
                     android:layout_weight="1"
                     android:gravity="end"/>
 
@@ -186,7 +203,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:text="Dusk"
-                    android:textSize="15sp"
+                    android:textSize="35sp"
                     android:layout_weight="1"/>
 
             <TextView
@@ -194,7 +211,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:text="13:45:10"
-                    android:textSize="15sp"
+                    android:textSize="35sp"
                     android:layout_weight="1"
                     android:gravity="end"/>
 
@@ -210,7 +227,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:text="Twilight"
-                    android:textSize="15sp"
+                    android:textSize="35sp"
                     android:layout_weight="1"/>
 
             <TextView
@@ -218,7 +235,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:text="13:45:10"
-                    android:textSize="15sp"
+                    android:textSize="35sp"
                     android:layout_weight="1"
                     android:gravity="end"/>
 

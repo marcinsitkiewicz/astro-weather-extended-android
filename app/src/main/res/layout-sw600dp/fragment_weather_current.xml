@@ -9,25 +9,25 @@
     <TextView
             android:id="@+id/tv_current_city"
             android:layout_width="wrap_content"
-            android:layout_height="0dp"
-            android:layout_weight="1"
+            android:layout_height="wrap_content"
             android:text="City"
             android:gravity="center"
+            android:layout_marginTop="50dp"
             android:layout_gravity="center"
-            android:textSize="25sp">
+            android:textSize="55sp">
     </TextView>
 
     <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_weight="1">
+            android:layout_marginTop="50dp">
 
         <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="Latitude: "
-                android:textSize="15sp"
+                android:textSize="35sp"
                 android:layout_weight="1"
                 android:gravity="end"
                 android:layout_gravity="center"/>
@@ -37,7 +37,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text=""
-                android:textSize="15sp"
+                android:textSize="35sp"
                 android:layout_weight="1"
                 android:gravity="start"
                 android:layout_gravity="center"/>
@@ -46,7 +46,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="Longitude: "
-                android:textSize="15sp"
+                android:textSize="35sp"
                 android:layout_weight="1"
                 android:gravity="end"
                 android:layout_gravity="center"/>
@@ -56,7 +56,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text=""
-                android:textSize="15sp"
+                android:textSize="35sp"
                 android:layout_weight="1"
                 android:gravity="start"
                 android:layout_gravity="center"/>
@@ -65,20 +65,21 @@
 
     <ImageView
             android:id="@+id/iv_icon"
-            android:layout_width="200dp"
-            android:layout_height="0dp"
+            android:layout_width="400dp"
+            android:layout_height="400dp"
+            android:layout_marginTop="50dp"
             android:contentDescription="Current weather image"
-            android:layout_gravity="center"
-            android:layout_weight="4"/>
+            android:layout_gravity="center"/>
 
     <TextView
             android:id="@+id/tv_current_desc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
             android:text="light rain"
             android:layout_gravity="center"
             android:textAllCaps="true"
-            android:textSize="@dimen/text_temp_size"
+            android:textSize="35sp"
             android:layout_marginBottom="50dp">
     </TextView>
 
@@ -86,7 +87,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Temperature:"
-            android:textSize="@dimen/text_temp_size"
+            android:textSize="35sp"
             android:layout_gravity="center">
     </TextView>
 
@@ -102,14 +103,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="25"
-                android:textSize="@dimen/text_temp_size">
+                android:textSize="35sp">
         </TextView>
 
         <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text=" (feels like "
-                android:textSize="@dimen/text_temp_size">
+                android:textSize="35sp">
         </TextView>
 
         <TextView
@@ -117,14 +118,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="25"
-                android:textSize="@dimen/text_temp_size">
+                android:textSize="35sp">
         </TextView>
 
         <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text=")"
-                android:textSize="@dimen/text_temp_size">
+                android:textSize="35sp">
         </TextView>
 
     </LinearLayout>
@@ -133,7 +134,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Pressure:"
-            android:textSize="@dimen/text_temp_size"
+            android:textSize="35sp"
             android:layout_gravity="center">
     </TextView>
 
@@ -149,14 +150,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="1000"
-                android:textSize="@dimen/text_temp_size">
+                android:textSize="35sp">
         </TextView>
 
         <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text=" hPa"
-                android:textSize="@dimen/text_temp_size">
+                android:textSize="35sp">
         </TextView>
 
     </LinearLayout>
