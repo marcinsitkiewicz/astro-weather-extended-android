@@ -7,6 +7,7 @@ import androidx.fragment.app.FragmentActivity
 class ViewPagerAdapter(fragmentActivity: FragmentActivity) : FragmentStateAdapter(fragmentActivity) {
 
     var mFragmentTitleList = ArrayList<String>()
+    var mFragmentIconList = ArrayList<Int>()
     private var mFragmentList = ArrayList<Fragment>()
 
 
@@ -18,9 +19,10 @@ class ViewPagerAdapter(fragmentActivity: FragmentActivity) : FragmentStateAdapte
         return mFragmentList.size
     }
 
-    fun addFragment(fragment: Fragment, title: String) {
+    fun addFragment(fragment: Fragment, title: String, icon: Int) {
         mFragmentList.add(fragment)
         mFragmentTitleList.add(title)
+        mFragmentIconList.add(icon)
     }
 
     fun getFragment(title: String): Fragment {
