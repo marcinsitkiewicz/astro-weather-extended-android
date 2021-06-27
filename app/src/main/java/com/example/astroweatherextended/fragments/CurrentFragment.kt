@@ -11,7 +11,6 @@ import androidx.fragment.app.Fragment
 import com.example.astroweatherextended.R
 import com.example.astroweatherextended.data.models.OpenWeatherData
 import com.google.gson.Gson
-import com.squareup.picasso.Picasso
 
 class CurrentFragment : Fragment() {
     private var tempUnit: String = ""

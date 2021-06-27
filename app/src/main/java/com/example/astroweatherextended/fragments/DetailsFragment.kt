@@ -5,13 +5,11 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import com.example.astroweatherextended.R
 import com.example.astroweatherextended.data.models.OpenWeatherData
 import com.google.gson.Gson
-import com.squareup.picasso.Picasso
 
 class DetailsFragment : Fragment() {
     private var tvLongitude: TextView?= null

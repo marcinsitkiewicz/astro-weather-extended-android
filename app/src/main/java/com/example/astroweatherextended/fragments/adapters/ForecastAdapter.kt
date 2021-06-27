@@ -8,7 +8,6 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.astroweatherextended.R
 import com.example.astroweatherextended.data.models.Daily
-import com.squareup.picasso.Picasso
 import java.text.SimpleDateFormat
 import java.util.*
 
